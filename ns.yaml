@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: v1 
 kind: Namespace
-matadata:
-  name: pavithra-ns
+metadata: 
+  name: pavitra-ns 
