@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: ey-cart-Pod
+  name: ey-cart-pod
   namespace: pavitra-ns
   labels: 
     app: ey-cart
