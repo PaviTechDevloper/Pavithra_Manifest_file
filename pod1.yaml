@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: recuitment
-  namespace: recuitment-app-ns
+  namespace: recuitment_app-ns
   labels:
     app: recuitment-app
 spec:
