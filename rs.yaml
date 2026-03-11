@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: ey-cart-rs 
+  namespace: pavitra-ns
+  labels:
+    app: cart
+spec: # It defines the behaviour of the replicaset
+  replicas: 3
+  selector: 
+    matchLabels:
+      app: web
+  template: # this is pod defination
+    metadata:
+      labels:
+        app: web
+    spec: # It contains container defination
+      containers:
+        - name: ey-cart-container
+          image: muralisocial123/ey-cart:v1.1.0
+          ports:
+            containerPort: 3000
+      
