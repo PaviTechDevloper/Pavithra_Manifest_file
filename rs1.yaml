@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: recuitment
+  namespace: pavitra-ns
+  labels:
+    app: recuitment-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels: 
+      app: web
+  template:
+    metadata:
+      labels: 
+        app: web
+    spec:
+      containers:
+        - name: recuitment-cont
+          image: pavithrasambath2003/recuitment:latest
+          ports:
+            - containerPort: 3000
